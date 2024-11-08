@@ -11,3 +11,6 @@ jobs:
         steps:
             - name: "print hellow world"
               run: echo "hello world"
+
+            - name: "new"
+              run: echo "$date"
