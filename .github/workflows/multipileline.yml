@@ -8,6 +8,7 @@ on:
     pull_request:
         branches:
             - master
+    workflow_dispatch:  # manul trigger in ui
 jobs:
     on-push:
         if: github.event_name == 'push'
