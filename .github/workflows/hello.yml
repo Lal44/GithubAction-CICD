@@ -1,0 +1,13 @@
+name: "Hello world"
+# comment pusg to master
+on:
+    push:
+        branches:
+            - master
+            - production
+jobs:
+    hello_word:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "print hellow world"
+              run: echo "hello world"
