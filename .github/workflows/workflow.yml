@@ -1,0 +1,39 @@
+name: "Multipieline"
+# comment pusg to master
+on:
+    push:
+        branches:
+            - master
+            - test
+    pull_request:
+        branches:
+            - master
+    workflow_dispatch:  # manul trigger in ui
+jobs:
+    on-push:
+        if: github.event_name == 'push'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "print hellow world"
+              run: echo "hello world"
+
+            - name: "new"
+              run: echo "$date"
+
+    on-pull-request:
+        if: github.event_name == 'pull_request'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "print hellow world"
+              run: echo "hello world"  
+            - name: "print hellow world"
+              run: echo "hello world"  
+              
+    on-workflow_dispatch:
+        if: github.event_name == 'workflow_dispatch'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "print hellow world"
+              run: echo "hello world"  
+            - name: "print hellow world"
+              run: echo "hello world" 
